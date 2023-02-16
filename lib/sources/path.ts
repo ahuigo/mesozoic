@@ -22,7 +22,7 @@ export class Path {
   }
 
   relativePath() {
-    return this.path().replace(this.root(), ".");
+    return this.path().replace(this.root().replace(/\/$/, ""), ".");
   }
 
   url() {

@@ -165,7 +165,8 @@ export class Builder {
             importMap: this.importMap,
             sources,
             bareSpecifiers,
-            baseURL: toFileUrl(this.context.root),
+            baseURL: toFileUrl(join(this.context.root, "/")),
+            // baseURL: toFileUrl(this.context.root),
           }),
           this.log,
         );

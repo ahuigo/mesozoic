@@ -3,6 +3,7 @@ import useAsset from "ultra/hooks/use-asset.js";
 import Hello from "./components/Test.tsx";
 import type { Foo } from "./types.ts";
 import { create, type Sheet, ThemeConfiguration, type TW } from "twind";
+import config from "@/config.js";
 
 const foo: Foo = "bar";
 const tw = create({ preflight: false });
@@ -30,6 +31,7 @@ export default function App() {
           <p>
             Welcome to <strong>Ultra</strong>. This is a barebones starter for your web app.
           </p>
+          <p>config:{JSON.stringify(config)}</p>
           <p>
             Take{" "}
             <a
